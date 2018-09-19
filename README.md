@@ -14,7 +14,7 @@ You can try the application here: https://vynguyen0205-angular-aspnet.azurewebsi
 - Check http://localhost:yourport/apis/persons. If it succeeds it means everything is connected correctly.
 
 # Steps to run front-end
-- Make sure you have the npm and the latest angular-cli installed.
+- Make sure you have npm and the latest angular-cli installed. Run "npm i -g angular-cli" if you haven't 
 - Open command line at the root of the project and run "npm install" to restore all the packages from npm
 - Run "npm run start" to serve the application live. By default the app is served at http://localhost:4200/.
 - Run "npm run build" to build the application (compiling, uglifying and bundling). The bundled files will be found at /dist folder.
