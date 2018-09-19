@@ -1,0 +1,25 @@
+<section class="mt20">
+  <div fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="15px" *ngIf="person">
+    <h4>Person ID: #{{person.personId}}</h4>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Name" disabled="disabled" [value]="person.name">
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="number" matInput placeholder="Age" disabled="disabled" [value]="person.age">
+      <mat-icon matSuffix>calendar_today</mat-icon>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Address" disabled="disabled" [value]="person.address">
+      <mat-icon matSuffix>map</mat-icon>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="15px">
+    <a routerLink="/" mat-button color="primary">
+      <mat-icon class="small-icon">arrow_back</mat-icon>GO BACK
+    </a>
+    <a routerLink="/update/{{person.personId}}" mat-raised-button color="primary" *ngIf="person">
+      <mat-icon class="small-icon">edit</mat-icon>GO TO UPDATE
+    </a>
+  </div>
+</section>

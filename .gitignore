@@ -1,0 +1,14 @@
+client/.vscode/settings.json
+server/Demo.Service/bin/Release/netcoreapp2.0/Demo.Service.deps.json
+server/Demo.DataImplementation/obj/
+server/Demo.Service/obj/
+server/Demo.ServiceImplementation/bin/
+server/Demo.ServiceImplementation/obj/
+server/Demo.WebApi/bin/
+server/Demo.WebApi/obj/
+server/Demo.Data/obj/
+server/Demo.DataImplementation/bin/
+server/.vs/
+server/Demo.Data/bin/
+server/Demo.Service/bin/
+server/Demo.WebApi/Properties/PublishProfiles/

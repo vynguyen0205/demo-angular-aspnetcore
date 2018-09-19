@@ -1,0 +1,35 @@
+.list-person {
+  padding: 10px;
+  height: 100%;
+}
+
+.mat-card-header .mat-card-title {
+  font-size: 18px;
+}
+
+.mat-card-subtitle {
+  margin-bottom: -8px;
+}
+
+.header-image {
+  background-color: #3f51b5;
+  background-size: cover;
+}
+
+.header-image .initial {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+}

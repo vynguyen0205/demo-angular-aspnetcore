@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.app-name {
+  font-family: Pacifico, sans-serif;
+}
+
+main {
+  margin-top: 80px;
+}
+
+.fixed-menu {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 100px;
+}
+
+.bottom-spacer {
+  margin-top: 80px;
+}

@@ -1,0 +1,39 @@
+<section class="mt20">
+  <div fxLayout="column" fxLayout fxLayoutAlign="center center" fxLayoutGap="15px">
+    <mat-form-field appearance="outline">
+      <mat-label>Search</mat-label>
+      <input matInput placeholder="Enter keyword..." [(ngModel)]="searchTerm" (keyup)="nextSearch($event)">
+      <mat-icon matSuffix *ngIf="!searchTerm">search</mat-icon>
+      <mat-icon matSuffix *ngIf="searchTerm" (click)="reset()">close</mat-icon>
+
+    </mat-form-field>
+  </div>
+</section>
+
+<section *ngFor="let person of persons" class="list-person" fxLayout fxLayoutAlign="center">
+  <mat-card fxFlex.xs="100%" fxFlex="600px">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image">
+        <div class="initial">{{person.name[0]}}</div>
+      </div>
+      <mat-card-title><span [innerHTML]="person.name | highlight: searchTerm"></span></mat-card-title>
+      <mat-card-subtitle><span [innerHTML]="person.age.toString() | highlight: searchTerm"></span> years old &#8226; <span [innerHTML]="person.address | highlight: searchTerm"></span></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions fxLayoutAlign="end">
+      <a routerLink="view/{{person.personId}}" mat-button color="primary">
+        <mat-icon class="small-icon">list_alt</mat-icon>View
+      </a>
+      <a routerLink="update/{{person.personId}}"  mat-button color="primary">
+        <mat-icon class="small-icon">edit</mat-icon>Update
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</section>
+<section fxLayout fxLayoutAlign="center" *ngIf="ready && persons.length == 0">
+  <p>No persons found.</p>
+</section>
+<section class="floating-button">
+  <a mat-fab color="primary" routerLink="/add">
+    <mat-icon>person_add</mat-icon>
+  </a>
+</section>

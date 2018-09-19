@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a:hover,
+a:active {
+  cursor: pointer;
+  color: lightgray;
+}
+
+.small-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 36px !important;
+}
+
+mat-form-field {
+  width: 300px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+mark{
+    background-color:lightgray;
+}

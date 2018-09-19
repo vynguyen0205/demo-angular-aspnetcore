@@ -1,0 +1,34 @@
+<section class="mt20">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" fxLayoutGap="15px">
+    <div *ngIf="person" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+      <mat-form-field>
+        <input type="text" matInput placeholder="Name" [(ngModel)]="person.name" name="name" required #nameInput="ngModel"
+          maxlength="50">
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-error *ngIf="nameInput.hasError('required')">Name is required.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="number" matInput placeholder="Age" [(ngModel)]="person.age" name="age" range="1-150" required
+          #ageInput="ngModel">
+        <mat-icon matSuffix>calendar_today</mat-icon>
+        <mat-error *ngIf="ageInput.hasError('required')">Age is required.</mat-error>
+        <mat-error *ngIf="!ageInput.hasError('required') && ageInput.hasError('range')">Age must be between 0 and 150.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Address" [(ngModel)]="person.address" name="address" required
+          #addressInput="ngModel" maxlength="50">
+        <mat-icon matSuffix>map</mat-icon>
+        <mat-error *ngIf="addressInput.hasError('required')">Address is required.</mat-error>
+      </mat-form-field>
+      <input type="hidden" [(ngModel)]="person.personId" name="personId">
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="15px">
+      <a routerLink="/" mat-button color="primary">
+        <mat-icon class="small-icon">arrow_back</mat-icon>GO BACK
+      </a>
+      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid || submitting" *ngIf="person">
+        <mat-icon class="small-icon">edit</mat-icon>UPDATE
+      </button>
+    </div>
+  </form>
+</section>

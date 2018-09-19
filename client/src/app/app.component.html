@@ -1,0 +1,20 @@
+<ngx-loading-bar [includeSpinner]="false" color="#fff"></ngx-loading-bar>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav>Start</mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="fixed-menu">
+      <div>
+        <button mat-icon-button>
+          <mat-icon>assignment</mat-icon>
+        </button>
+      </div>
+      <div>
+        <a routerLink="/" class="app-name">Angular & Asp.Net Core</a>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+      <div class="bottom-spacer"></div>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
