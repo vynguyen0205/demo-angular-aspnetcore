@@ -1,6 +1,6 @@
 .list-person {
   padding: 10px;
-  height: 100%;
+  max-height: 140px;
 }
 
 .mat-card-header .mat-card-title {
