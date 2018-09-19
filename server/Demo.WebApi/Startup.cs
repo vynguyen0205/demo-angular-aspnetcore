@@ -76,8 +76,7 @@ namespace Demo.WebApi
             {
                 if (context.Request.Path.HasValue &&
                     context.Request.Path.Value != "/" &&
-                    !context.Request.Path.Value.StartsWith("/api") &&
-                    !context.Request.Path.Value.StartsWith("/hub"))
+                    !context.Request.Path.Value.StartsWith("/api"))
                 {
                     context.Response.ContentType = "text/html";
 
