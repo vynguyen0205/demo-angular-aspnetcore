@@ -46,9 +46,9 @@ namespace Demo.WebApi.Controllers
         }
         
         // PUT: api/Persons/5
-        [HttpPut]
+        [HttpPut("{id}")]
         [ValidateModelState] // Validate model before executing the action
-        public IActionResult Put([FromBody]PersonDto model)
+        public IActionResult Put(int id, [FromBody]PersonDto model)
         {
             var updatedPerson = _personService.Update(model);
 

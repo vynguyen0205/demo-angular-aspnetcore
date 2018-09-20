@@ -21,6 +21,6 @@ export class PersonService {
   }
 
   updatePerson(person): Observable<any> {
-    return this.http.put(Constants.apiPersons, person);
+    return this.http.put(`${Constants.apiPersons}/${person.personId}`, person);
   }
 }
