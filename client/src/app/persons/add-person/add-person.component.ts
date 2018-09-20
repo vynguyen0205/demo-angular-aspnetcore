@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { PersonService } from "../../interceptors/person.service";
+import { PersonService } from "../../services/person.service";
 import { NgForm } from "@angular/forms";
 import { Router } from "@angular/router";
 import { MatSnackBar } from "@angular/material";

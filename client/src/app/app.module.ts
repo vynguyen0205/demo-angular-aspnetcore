@@ -17,7 +17,7 @@ import {
   HttpClientModule
 } from "@angular/common/http";
 import { HttpCustomInterceptor } from "./interceptors/http-custom.interceptor";
-import { PersonService } from "./interceptors/person.service";
+import { PersonService } from "./services/person.service";
 import { FormsModule } from "@angular/forms";
 import { RangeValidatorDirective } from "./directives/range-validator.directive";
 import { HighlightSearchPipe } from "./pipes/hightlight-search.pipe";

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PersonService } from '../../interceptors/person.service';
+import { PersonService } from '../../services/person.service';
 
 @Component({
   selector: 'app-view-person',
